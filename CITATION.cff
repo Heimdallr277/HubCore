@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use HubCore, please cite it as below."
 title: "HubCore: Cost sharing for energy hubs"
+version: 0.2.3
 license: MIT
 authors:
   - family-names: Mu
