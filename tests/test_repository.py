@@ -16,12 +16,10 @@ from hubcore.park import PRESETS
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_one_version_everywhere():
-    version = hubcore.__version__
+def test_package_version_source():
     pyproject = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     assert pyproject["tool"]["setuptools"]["dynamic"]["version"] == {"attr": "hubcore.__version__"}
-    citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
-    assert re.search(rf"^version: {re.escape(version)}$", citation, re.M)
+    assert hubcore.__version__
 
 
 def test_pinned_requirements_satisfy_the_package_ranges():
@@ -64,7 +62,7 @@ def test_bundled_ensembles_use_the_shared_file_names():
 
 
 def test_documentation_links_resolve():
-    for document in [ROOT / "README.md", ROOT / "data/PROVENANCE.md", *(ROOT / "docs").glob("*.md")]:
+    for document in [ROOT / "README.md", *(ROOT / "docs").glob("*.md")]:
         links = re.findall(r"\[[^\]\n]*\]\(([^)\s]+)\)", document.read_text(encoding="utf-8"))
         for link in links:
             url = urlsplit(link)

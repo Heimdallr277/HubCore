@@ -13,7 +13,6 @@ for p in (ROOT / "src", ROOT):
 
 import streamlit as st  # noqa: E402
 
-from hubcore import __version__  # noqa: E402
 from ui import state, style  # noqa: E402
 
 st.set_page_config(page_title="HubCore · robust cost-sharing for energy hubs", page_icon="⚡",
@@ -41,6 +40,6 @@ with st.sidebar:
     if not state.is_preset_unchanged():
         st.caption("Edited park or assumptions: results are computed live.")
     st.divider()
-    st.caption(f"HubCore ⚡ Built by Xinyi Mu.")
+    st.caption("HubCore ⚡ Built by Xinyi Mu.")
 
 nav.run()

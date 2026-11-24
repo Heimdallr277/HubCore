@@ -9,7 +9,7 @@ import numpy as np
 import pytest
 from streamlit.testing.v1 import AppTest
 
-from hubcore import __version__, allocation, annual_reference, games
+from hubcore import allocation, annual_reference, games
 from hubcore import robustness as R
 from hubcore import uncertainty as U
 from hubcore.costs import Assumptions, coalition_costs
@@ -267,4 +267,3 @@ def test_method_page_benchmarks_match_json():
     html = " ".join(el.value for el in at.markdown)
     assert f"{verification['gap_same_battery_pct']:.2f}%" in html
     assert f"{verification['gap_optimal_pct']:.2f}%" in html
-    assert f"HubCore v{__version__}" in " ".join(el.value for el in at.caption)

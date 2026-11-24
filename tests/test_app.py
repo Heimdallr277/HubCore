@@ -37,7 +37,7 @@ def test_materiality_updates_in_same_rerun_and_reference_dispatch():
     at.slider(key='input_rel').set_value(0.0).run()
     assert not at.exception and at.session_state['abs_tol']==0
     assert any('Threshold: max(€0, 0.00%' in el.value for el in at.markdown)
-    [b for b in at.button if b.label=='Repair my proposal'][0].click().run()
+    next(b for b in at.button if b.label == "Repair the proposal").click().run()
     assert not at.exception and any('L1 distance' in el.value for el in at.success)
     at.switch_page('app_pages/build.py').run()
     at.toggle(key='show_dispatch').set_value(True).run()

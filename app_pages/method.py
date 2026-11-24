@@ -4,7 +4,6 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from hubcore import __version__
 from hubcore.uncertainty import default_space
 from ui import state, style
 
@@ -78,4 +77,4 @@ with st.expander("Full-ensemble LP comparison"):
                                                        ("100 futures · seed 73", benchmark["holdout_gaps"])]]
                                  ).round(3), hide_index=True, width="stretch")
         st.caption("Each gap is (screening cost - LP optimum) / LP optimum, before coordination overhead. The separate 86 cases above also test the full hourly dispatch and the fixed-battery design.")
-st.caption(f"Xinyi Mu · HubCore · 2026")
+st.caption("Xinyi Mu · HubCore · 2026")
