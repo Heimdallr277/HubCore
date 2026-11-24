@@ -1,0 +1,56 @@
+[project]
+name = "hubcore"
+dynamic = ["version"]
+description = "Cost sharing for energy hubs: cooperative game theory, optimization and decision-making"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "Xinyi Mu" }]
+keywords = ["cooperative game theory", "energy hubs", "grid congestion", "decision-making",
+            "scenario discovery", "linear programming"]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+# Compatible ranges for the reusable package. requirements*.txt pin the exact versions
+# used to produce the bundled evidence and run the tests.
+dependencies = ["numpy>=2.0,<3", "scipy>=1.13,<2", "pandas>=2.2,<4"]
+
+[project.optional-dependencies]
+app = ["plotly>=7.1,<8", "streamlit>=1.67,<2"]
+dev = ["pytest>=9.0", "ruff>=0.17", "demandlib==0.2.2"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "hubcore.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hubcore = ["data/*.gz", "data/*.json", "data/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+markers = ["slow: exact-LP verification and full-ensemble regression tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E702", "E731"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["hubcore", "ui"]
+
+[tool.ruff.lint.per-file-ignores]
+"app_pages/*" = ["E501"]
+"ui/*" = ["E501"]

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use HubCore, please cite it as below."
+title: "HubCore: Cost sharing for energy hubs"
+license: MIT
+authors:
+  - family-names: Mu
+    given-names: Xinyi
+keywords:
+  - cooperative game theory
+  - energy hubs
+  - grid congestion
+  - decision-making
+  - scenario discovery
+  - decision support

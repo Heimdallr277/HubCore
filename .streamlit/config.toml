@@ -1,0 +1,41 @@
+# HubCore interface theme.
+[theme]
+base = "light"
+primaryColor = "#286AD6"
+backgroundColor = "#F3F7FB"
+secondaryBackgroundColor = "#DCE8F0"
+textColor = "#23384A"
+linkColor = "#286AD6"
+borderColor = "#768B9D"
+showWidgetBorder = true
+dataframeBorderColor = "#C3D2DE"
+dataframeHeaderBackgroundColor = "#DCE8F0"
+dataframeHeaderTextColor = "#23384A"
+blueColor = "#286AD6"
+blueTextColor = "#1D4F9E"
+greenColor = "#38746E"
+greenTextColor = "#2B5C57"
+redColor = "#A24E45"
+redTextColor = "#8A3F37"
+yellowColor = "#E9C66A"
+yellowTextColor = "#5C4710"
+yellowBackgroundColor = "#FBF2D9"
+orangeColor = "#A24E45"
+orangeTextColor = "#8A3F37"
+violetColor = "#725294"
+grayColor = "#526778"
+grayTextColor = "#526778"
+chartCategoricalColors = ["#21689C", "#AC7C26", "#725294", "#50955C", "#9D4E6F", "#0C8FA7", "#874814", "#AA72AD"]
+chartSequentialColors = ["#002F4F", "#093B5A", "#174867", "#2C5774", "#3F6681", "#51768F", "#63859D", "#7695AB", "#89A5B9", "#9CB5C8"]
+baseRadius = "0.6rem"
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

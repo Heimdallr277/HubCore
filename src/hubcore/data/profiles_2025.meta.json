@@ -1,0 +1,37 @@
+{
+  "year": 2025,
+  "unit": "kW per 1 MWh/year",
+  "columns": [
+    "g0",
+    "g1",
+    "g2",
+    "g3",
+    "g4",
+    "g5",
+    "g6",
+    "industry_2shift",
+    "ev_depot_night",
+    "ev_workplace_day"
+  ],
+  "peak_to_mean": {
+    "g0": 2.076,
+    "g1": 4.158,
+    "g2": 2.186,
+    "g3": 1.347,
+    "g4": 1.975,
+    "g5": 2.197,
+    "g6": 2.61,
+    "industry_2shift": 1.71,
+    "ev_depot_night": 4.294,
+    "ev_workplace_day": 6.027
+  },
+  "holidays": {
+    "2025-01-01": "Nieuwjaarsdag",
+    "2025-04-21": "Tweede Paasdag",
+    "2025-04-26": "Koningsdag",
+    "2025-05-29": "Hemelvaartsdag",
+    "2025-06-09": "Tweede Pinksterdag",
+    "2025-12-25": "Eerste Kerstdag",
+    "2025-12-26": "Tweede Kerstdag"
+  }
+}

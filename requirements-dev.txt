@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest==9.1.1
+ruff==0.17.5
+# only needed to regenerate src/hubcore/data/profiles_2025.csv.gz
+demandlib==0.2.2

@@ -1,0 +1,235 @@
+{
+  "scope": "Voorbeeldpark, all 63 nonempty groups. Percentage gaps exclude coordination overhead.",
+  "training_design": {
+    "n": 200,
+    "seed": 42,
+    "fingerprint": "95d0d5bd97b13b07"
+  },
+  "holdout_design": {
+    "n": 100,
+    "seed": 73,
+    "fingerprint": "5846434472d590c4"
+  },
+  "full_hourly_crosscheck": {
+    "count": 86,
+    "max_absolute_difference_eur": 3.725290298461914e-09
+  },
+  "training_gaps": {
+    "coalition_futures": 12600,
+    "median_pct": 0.08089122947372035,
+    "p95_pct": 1.0038036045627303,
+    "max_pct": 5.28006953391446,
+    "above_2pct": 46,
+    "min_fast_minus_reference_eur": -6.693881005048752e-10,
+    "worst": {
+      "seed": 42,
+      "future": 129,
+      "mask": 36,
+      "members": [
+        "Cold store",
+        "Metalworks"
+      ],
+      "screening_before_overhead_eur": 78415.97581374791,
+      "reference_before_overhead_eur": 74483.21050784197
+    }
+  },
+  "holdout_gaps": {
+    "coalition_futures": 6300,
+    "median_pct": 0.09001583130859797,
+    "p95_pct": 0.9253043705555032,
+    "max_pct": 3.9121473907224424,
+    "above_2pct": 20,
+    "min_fast_minus_reference_eur": -4.3655745685100555e-10,
+    "worst": {
+      "seed": 73,
+      "future": 20,
+      "mask": 32,
+      "members": [
+        "Metalworks"
+      ],
+      "screening_before_overhead_eur": 61406.94605353408,
+      "reference_before_overhead_eur": 59095.060197953964
+    }
+  },
+  "memberships": {
+    "six_firms": {
+      "reference": {
+        "members": [
+          "Office HQ",
+          "Logistics DC",
+          "Cold store",
+          "Bakery",
+          "Fitness center",
+          "Metalworks"
+        ],
+        "viable": 160,
+        "exact_core_exists": 32,
+        "adaptive_material_pass": 51,
+        "train_failures": 149,
+        "box": {},
+        "training": {
+          "coverage": 1.0,
+          "density": 0.745,
+          "mass": 1.0,
+          "inside": 200
+        },
+        "holdout": {
+          "seed": 73,
+          "n": 100,
+          "total_failures": 73,
+          "coverage": 1.0,
+          "density": 0.73,
+          "mass": 1.0,
+          "inside": 100
+        },
+        "best_fixed_pass": 1
+      },
+      "changed_future_ids": {
+        "hub_viable": {
+          "screening_pass_reference_fail": [],
+          "screening_fail_reference_pass": []
+        },
+        "core_exists": {
+          "screening_pass_reference_fail": [
+            133
+          ],
+          "screening_fail_reference_pass": []
+        },
+        "stable": {
+          "screening_pass_reference_fail": [
+            26,
+            152
+          ],
+          "screening_fail_reference_pass": [
+            28
+          ]
+        }
+      },
+      "nearest_screening_cases": {
+        "core_exists_pass": {
+          "future": 143,
+          "screening_margin_eur": -27.67068236066704,
+          "reference_pass": true
+        },
+        "core_exists_fail": {
+          "future": 55,
+          "screening_margin_eur": 48.53901164459118,
+          "reference_pass": false
+        },
+        "stable_pass": {
+          "future": 3,
+          "screening_margin_eur": -11.84166573834591,
+          "reference_pass": true
+        },
+        "stable_fail": {
+          "future": 79,
+          "screening_margin_eur": 67.39672059719305,
+          "reference_pass": false
+        }
+      },
+      "screening_rule_on_lp_holdout": {
+        "seed": 73,
+        "n": 100,
+        "failures": 73,
+        "inside": 100,
+        "failures_inside": 73,
+        "coverage": 1.0,
+        "density": 0.73,
+        "mass": 1.0
+      }
+    },
+    "without_cold_store": {
+      "reference": {
+        "members": [
+          "Office HQ",
+          "Logistics DC",
+          "Bakery",
+          "Fitness center",
+          "Metalworks"
+        ],
+        "viable": 163,
+        "exact_core_exists": 96,
+        "adaptive_material_pass": 124,
+        "train_failures": 76,
+        "box": {
+          "growth:5": [
+            null,
+            1.5335341053293645
+          ]
+        },
+        "training": {
+          "coverage": 0.9736842105263158,
+          "density": 0.48366013071895425,
+          "mass": 0.765,
+          "inside": 153
+        },
+        "holdout": {
+          "seed": 73,
+          "n": 100,
+          "total_failures": 38,
+          "coverage": 0.868421052631579,
+          "density": 0.42857142857142855,
+          "mass": 0.77,
+          "inside": 77
+        },
+        "best_fixed_pass": 5
+      },
+      "changed_future_ids": {
+        "hub_viable": {
+          "screening_pass_reference_fail": [],
+          "screening_fail_reference_pass": []
+        },
+        "core_exists": {
+          "screening_pass_reference_fail": [
+            88,
+            95,
+            180
+          ],
+          "screening_fail_reference_pass": []
+        },
+        "stable": {
+          "screening_pass_reference_fail": [
+            26,
+            129,
+            146
+          ],
+          "screening_fail_reference_pass": [
+            25
+          ]
+        }
+      },
+      "nearest_screening_cases": {
+        "core_exists_pass": {
+          "future": 88,
+          "screening_margin_eur": -7.9828659432938975,
+          "reference_pass": false
+        },
+        "core_exists_fail": {
+          "future": 14,
+          "screening_margin_eur": 47.17178550403878,
+          "reference_pass": false
+        },
+        "stable_pass": {
+          "future": 129,
+          "screening_margin_eur": -4.721068950979316,
+          "reference_pass": false
+        },
+        "stable_fail": {
+          "future": 24,
+          "screening_margin_eur": 12.390698889504165,
+          "reference_pass": false
+        }
+      },
+      "screening_rule_on_lp_holdout": {
+        "seed": 73,
+        "n": 100,
+        "failures": 38,
+        "inside": 45,
+        "failures_inside": 29,
+        "coverage": 0.7631578947368421,
+        "density": 0.6444444444444445,
+        "mass": 0.45
+      }
+    }
+  }
+}
